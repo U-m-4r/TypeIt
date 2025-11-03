@@ -1,0 +1,12 @@
+{
+  "name": "typeit",
+  "version": "1.0.0",
+  "description": "TypeIt - typing speed tester with file-based storage",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

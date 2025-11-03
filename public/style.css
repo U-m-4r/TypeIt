@@ -1,0 +1,131 @@
+*{box-sizing:border-box;font-family:Inter, system-ui, Arial, sans-serif}
+body{display:flex;align-items:center;justify-content:center;min-height:100vh;background:#0f172a;color:#e6eef8;margin:0}
+body.light{background:#f5f7fa;color:#222;}
+body.colorful {
+  background: linear-gradient(135deg, #ffb700 0%, #0b63ff 100%);
+  color: #222;
+}
+.container{width:900px;max-width:98%;background:#07122a;padding:36px 32px;border-radius:16px;box-shadow:0 10px 30px rgba(2,6,23,.13);margin-top:32px;}
+body.light .container{background:#fff;color:#222;}
+body.colorful .container {
+  background: rgba(255,255,255,0.85);
+  color: #222;
+}
+input,textarea,button{font-size:16px;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,.06);outline:none}
+#auth{max-width:420px;margin:0 auto;text-align:center}
+#auth h1{margin:0 0 12px}
+#auth input{display:block;width:100%;margin-bottom:10px}
+#app .top{display:flex;justify-content:space-between;margin-bottom:12px}
+#paragraph{background:#062033;padding:20px;border-radius:10px;min-height:90px;margin-bottom:18px;font-size:1.18em;line-height:1.6;letter-spacing:.02em;}
+body.light #paragraph{background:#e6eef8;color:#222;}
+body.colorful #paragraph {
+  background: #ffe066;
+  color: #222;
+}
+#input{width:100%;height:140px;background:#071f34;color:#e6eef8;font-size:1.15em;border:2px solid #0b63ff;box-shadow:0 2px 8px rgba(11,99,255,0.04);margin-bottom:10px;transition:border .2s;}
+body.light #input{background:#f5f7fa;color:#222;}
+body.colorful #input {
+  background: #e2e8f0;
+  color: #222;
+}
+#input:focus{border-color:#ffb700;background:#0b1a2f;}
+.controls{display:flex;gap:22px;align-items:center;margin-top:22px;justify-content:center;flex-wrap:wrap}
+button{background:#0b63ff;color:white;border:none;cursor:pointer;font-size:1.1em;padding:14px 28px;border-radius:10px;box-shadow:0 2px 8px rgba(11,99,255,0.10);transition:background .2s,box-shadow .2s;}
+button:hover{background:#0846b7;box-shadow:0 4px 16px rgba(11,99,255,0.18);}
+body.light button{background:#222;color:#fff;}
+body.colorful button {
+  background: #ff4d4d;
+  color: #fff;
+}
+#status{color:#ffbaba}
+#accuracy{margin-left:8px;}
+#countdown{animation:fadeIn .3s;}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+#heatmap{margin:18px 0 0 0;min-height:32px;display:flex;flex-wrap:wrap;gap:6px;justify-content:center;}
+#heatmap span{display:inline-block;margin:2px 4px;padding:4px 8px;border-radius:6px;font-size:1em;min-width:32px;text-align:center;}
+#leaderboard{margin:28px auto 0 auto;max-width:420px;}
+body.light #leaderboard{background:#e6eef8;}
+body.colorful #leaderboard {
+  background: #fffbe6;
+  color: #222;
+}
+#leaderboard h3{margin:0 0 16px 0;font-size:1.3em;text-align:center;letter-spacing:1px;}
+.lb-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.07);}
+.lb-row:last-child{border-bottom:none;}
+.lb-num{font-weight:bold;width:32px;text-align:right;}
+.lb-user{flex:1;text-align:left;padding-left:12px;}
+.lb-wpm{font-weight:bold;color:#0b63ff;}
+body.light .lb-wpm{color:#222;}
+body.colorful .lb-wpm {
+  color: #ff4d4d;
+}
+body.colorful .top {
+  color: #222;
+}
+#start,#showLeaderboard{font-size:1.1em;padding:12px 24px;border-radius:8px;box-shadow:0 2px 8px rgba(11,99,255,0.08);}
+#theme{margin-left:auto;}
+@media (max-width: 900px) {
+  .container {
+    width: 98vw;
+    padding: 18px 4vw;
+    border-radius: 10px;
+  }
+  #paragraph {
+    font-size: 1em;
+    padding: 12px;
+    min-height: 60px;
+  }
+  #input {
+    font-size: 1em;
+    height: 100px;
+    padding: 8px;
+  }
+  .controls {
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 12px;
+  }
+  #leaderboard {
+    padding: 10px 8px;
+    font-size: 1em;
+    max-width: 98vw;
+  }
+}
+@media (max-width: 600px) {
+  .container {
+    width: 100vw;
+    padding: 6px 2vw;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  #paragraph {
+    font-size: 0.95em;
+    padding: 8px;
+    min-height: 40px;
+  }
+  #input {
+    font-size: 0.95em;
+    height: 70px;
+    padding: 6px;
+  }
+  .controls {
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 8px;
+  }
+  #leaderboard {
+    padding: 6px 2px;
+    font-size: 0.95em;
+    max-width: 100vw;
+  }
+  .top {
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+  }
+  button {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 1em;
+  }
+}

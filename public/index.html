@@ -20,10 +20,23 @@
     </div>
 
     <div id="app" style="display:none">
-      <div class="top" style="display:flex;align-items:center;gap:24px;">
+      <div class="top" style="display:flex;align-items:center;gap:24px;flex-wrap:wrap;">
         <div>Welcome <span id="usern"></span></div>
         <div style="margin-left:16px;">Best WPM: <span id="best"></span></div>
         <button id="theme">Toggle Theme</button>
+      </div>
+      <div style="margin:16px 0;display:flex;gap:12px;flex-wrap:wrap;align-items:center;">
+        <label for="category" style="font-weight:bold;">Category:</label>
+        <select id="category" style="padding:8px 12px;border:1px solid #ccc;border-radius:6px;font-size:1em;cursor:pointer;">
+          <option value="Technology">Technology</option>
+          <option value="Sports">Sports</option>
+          <option value="Anime">Anime</option>
+          <option value="Horror story">Horror Story</option>
+          <option value="Science">Science</option>
+          <option value="History">History</option>
+          <option value="Travel">Travel</option>
+          <option value="Food">Food</option>
+        </select>
       </div>
       <div id="paragraph"></div>
       <textarea id="input" placeholder="Start typing..." autofocus disabled></textarea>
